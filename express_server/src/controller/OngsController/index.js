@@ -1,11 +1,12 @@
-import { generateUUID } from "../../helpers/uuid";
+import OngsDao from "../../dao/OngsDao";
 
 export default class OngsController {
   async listOngs() {
     return { name: "Teste listar" };
   }
-  async cadastrar() {
-    const id = generateUUID();
-    return { name: "Teste cadastrar" };
+
+  async cadastrar(body) {
+    const ongsDao = new OngsDao();
+    return ongsDao.cadastrar(body);
   }
 }

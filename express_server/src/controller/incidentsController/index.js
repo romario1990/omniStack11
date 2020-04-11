@@ -1,4 +1,4 @@
-export default class incidentsController {
+export default class IncidentsController {
   async listIncidentss() {
     return { name: "Teste" };
   }
